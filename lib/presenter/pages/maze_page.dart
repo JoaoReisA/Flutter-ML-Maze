@@ -16,22 +16,32 @@ class _MazePageState extends State<MazePage> {
     WallWidget(),
     WallWidget(),
     WallWidget(),
+    WallWidget(),
+    WallWidget(),
+    WallWidget(),
+    PathWidget(),
     StartWidget(),
     PathWidget(),
     PathWidget(),
+    WallWidget(),
+    PathWidget(),
     PathWidget(),
     WallWidget(),
     WallWidget(),
     WallWidget(),
-    GoalWidget()
+    GoalWidget(),
+    WallWidget(),
+    WallWidget(),
+    WallWidget(),
   ];
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(16),
       child: Container(
-        height: 300,
-        width: 300,
+        padding: const EdgeInsets.all(8),
+        height: double.maxFinite,
+        width: double.maxFinite,
         child: GridView.count(
           crossAxisCount: 5,
           crossAxisSpacing: 5,
