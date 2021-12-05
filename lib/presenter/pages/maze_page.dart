@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:machine_learning_examples/presenter/widgets/goal_widget.dart';
+import 'package:machine_learning_examples/presenter/widgets/path_widget.dart';
+import 'package:machine_learning_examples/presenter/widgets/start_widget.dart';
+import 'package:machine_learning_examples/presenter/widgets/wall_widget.dart';
 
 class MazePage extends StatefulWidget {
   const MazePage({Key? key}) : super(key: key);
@@ -8,6 +12,19 @@ class MazePage extends StatefulWidget {
 }
 
 class _MazePageState extends State<MazePage> {
+  final mazeList = <Widget>[
+    WallWidget(),
+    WallWidget(),
+    WallWidget(),
+    StartWidget(),
+    PathWidget(),
+    PathWidget(),
+    PathWidget(),
+    WallWidget(),
+    WallWidget(),
+    WallWidget(),
+    GoalWidget()
+  ];
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -20,30 +37,31 @@ class _MazePageState extends State<MazePage> {
           crossAxisSpacing: 5,
           mainAxisSpacing: 5,
           children: [
-            Container(
-              height: 30,
-              color: Colors.purple,
-            ),
-            Container(
-              height: 30,
-              color: Colors.purple,
-            ),
-            Container(
-              height: 30,
-              color: Colors.purple,
-            ),
-            Container(
-              height: 30,
-              color: Colors.purple,
-            ),
-            Container(
-              height: 30,
-              color: Colors.purple,
-            ),
-            Container(
-              height: 30,
-              color: Colors.purple,
-            ),
+            ...mazeList
+            // Container(
+            //   height: 30,
+            //   color: Colors.purple,
+            // ),
+            // Container(
+            //   height: 30,
+            //   color: Colors.purple,
+            // ),
+            // Container(
+            //   height: 30,
+            //   color: Colors.purple,
+            // ),
+            // Container(
+            //   height: 30,
+            //   color: Colors.purple,
+            // ),
+            // Container(
+            //   height: 30,
+            //   color: Colors.purple,
+            // ),
+            // Container(
+            //   height: 30,
+            //   color: Colors.purple,
+            // ),
           ],
         ),
       ),
