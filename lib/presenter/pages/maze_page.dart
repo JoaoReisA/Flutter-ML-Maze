@@ -30,8 +30,18 @@ class _MazePageState extends State<MazePage> {
     WallWidget(),
     WallWidget(),
     WallWidget(),
-    GoalWidget(),
+    PathWidget(),
     WallWidget(),
+    WallWidget(),
+    WallWidget(),
+    WallWidget(),
+    GoalWidget(),
+    PathWidget(),
+    PathWidget(),
+    PathWidget(),
+    WallWidget(),
+    WallWidget(),
+    PathWidget(),
     WallWidget(),
     WallWidget(),
   ];
@@ -81,7 +91,7 @@ class _MazePageState extends State<MazePage> {
           Positioned(
             left: 0,
             right: 0,
-            bottom: 120,
+            bottom: 60,
             child: ElevatedButton(
               onPressed: () {
                 setState(() {
